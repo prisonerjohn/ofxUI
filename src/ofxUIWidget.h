@@ -35,7 +35,7 @@ public:
     ofxUIWidget() 
     {        
         name = "base"; 
-        id = -1; 
+        ID = -1;
         hit = false; 
         visible = true; 
 #ifdef TARGET_OPENGLES
@@ -64,7 +64,7 @@ public:
         
         dead = false;
         embedded = false;
-        modal = false;         
+		modal = false;
     }
     
     virtual ~ofxUIWidget() 
@@ -152,7 +152,7 @@ public:
     
     virtual void drawPadded()
     {
-		if(draw_padded_rect)
+		if(draw_padded_rect && !embedded)
 		{
             ofFill();
             ofSetColor(color_padded_rect); 
@@ -162,7 +162,7 @@ public:
     
     virtual void drawPaddedOutline()
     {
-        if(draw_padded_rect_outline)
+        if(draw_padded_rect_outline && !embedded)
 		{
             ofNoFill();
             ofSetColor(color_padded_rect_outline); 
@@ -458,12 +458,12 @@ public:
     
     void setID(int _id)
     {
-        id = _id; 
+        ID = _id;
     }
     
     int getID()
     {
-        return id;
+        return ID;
     }
     
     virtual void addWidget(ofxUIWidget *widget)
@@ -515,6 +515,27 @@ public:
         
     }
     
+    virtual void addEmbeddedWidget(ofxUIWidget *widget)
+    {
+        widget->setEmbedded(true);
+        embeddedWidgets.push_back(widget);        
+    }
+    
+    virtual int getEmbeddedWidgetsSize()
+    {
+        return embeddedWidgets.size();
+    }
+    
+    ofxUIWidget *getEmbeddedWidget(int index)
+    {
+        return embeddedWidgets[index%embeddedWidgets.size()];
+    }
+    
+    virtual void clearEmbeddedWidgets()
+    {
+        embeddedWidgets.clear();        //does not deallocate widgets, just deletes the pointers and sets the size to zero
+    }
+    
 protected:    
 	ofxUIWidget *parent; 
 	ofxUIRectangle *rect; 	
@@ -523,7 +544,7 @@ protected:
     string name;            //State Properties
 	int kind; 
 	bool visible;
-    int id;
+    int ID;
     bool hit; 
     int state; 
     bool embedded;
@@ -548,6 +569,8 @@ protected:
 	bool draw_padded_rect_outline;     
     ofColor color_padded_rect; 
 	ofColor color_padded_rect_outline;
+    
+    vector<ofxUIWidget *> embeddedWidgets; 
     
 #ifdef TARGET_OPENGLES          //iOS Mode
     int touchId;     

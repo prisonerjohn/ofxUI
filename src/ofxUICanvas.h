@@ -48,8 +48,8 @@ public:
         }
 		for(int i = 0; i < widgets.size(); i++)
 		{
-			ofxUIWidget *w = widgets[i]; 
-			delete w; 
+			ofxUIWidget *w = widgets[i];
+			delete w;
 		}
 		widgets.clear();             
     }
@@ -467,7 +467,7 @@ public:
 	
     void setVisible(bool _visible)
     {
-        visible = _visible; 
+        visible = _visible;
         if(visible)
         {
             enable();
@@ -499,7 +499,8 @@ public:
 	{
         if(!isEnabled())
         {            
-            enabled = true; 
+            enabled = true;
+            visible = true; 
             enableAppEventCallbacks();        
     #ifdef TARGET_OPENGLES
             enableTouchEventCallbacks();
@@ -515,7 +516,8 @@ public:
 	{
         if(isEnabled())
         {                    
-            enabled = false; 
+            enabled = false;
+            visible = false;
             disableAppEventCallbacks();        
     #ifdef TARGET_OPENGLES
             disableTouchEventCallbacks();
@@ -1154,6 +1156,12 @@ public:
                 removeWidget(label);
             }
         }
+        
+        for(int i = 0; i < widget->getEmbeddedWidgetsSize(); i++)
+        {
+            removeWidget(widget->getEmbeddedWidget(i));
+        }
+        widget->clearEmbeddedWidgets();
 
         delete widget;
     }    
