@@ -25,6 +25,10 @@
 #ifndef OFXUI_CANVAS
 #define OFXUI_CANVAS
 
+#ifdef OFX_UI_FONT_INCLUDE
+#include OFX_UI_FONT_INCLUDE
+#endif
+
 #include "ofxUIWidget.h"
 #include <vector>
 #include <map>
@@ -111,9 +115,9 @@ public:
 		paddedRect = new ofxUIRectangle(-padding, -padding, w+padding*2.0, h+padding*2.0);
 		paddedRect->setParent(rect);
         
-        font_large = new ofTrueTypeFont();
-        font_medium = new ofTrueTypeFont();
-        font_small = new ofTrueTypeFont();
+        font_large = new OFX_UI_FONT_RENDERER();
+        font_medium = new OFX_UI_FONT_RENDERER();
+        font_small = new OFX_UI_FONT_RENDERER();
         
         fontName = OFX_UI_FONT_NAME;
         setFont(fontName,true, true, false, 0.0, OFX_UI_FONT_RESOLUTION);
@@ -387,17 +391,17 @@ public:
 
 #endif
 	 
-    ofTrueTypeFont *getFontLarge()
+    OFX_UI_FONT_RENDERER *getFontLarge()
     {
         return font_large;
     }    
     
-    ofTrueTypeFont *getFontMedium()
+    OFX_UI_FONT_RENDERER *getFontMedium()
     {
         return font_medium;
     }
 
-    ofTrueTypeFont *getFontSmall()
+    OFX_UI_FONT_RENDERER *getFontSmall()
     {
         return font_small;
     }
@@ -422,7 +426,7 @@ public:
                 {
                     delete font_large;          
                 }
-                font_large = new ofTrueTypeFont(); 
+                font_large = new OFX_UI_FONT_RENDERER(); 
                 font_large->loadFont(fontName,_size,true, true, false, 0.0,_resolution); 				            
                 break; 
 
@@ -431,7 +435,7 @@ public:
                 {
                     delete font_medium;          
                 }
-                font_medium = new ofTrueTypeFont(); 
+                font_medium = new OFX_UI_FONT_RENDERER(); 
                 font_medium->loadFont(fontName,_size,true, true, false, 0.0,_resolution); 				                            
                 break; 
 
@@ -440,7 +444,7 @@ public:
                 {
                     delete font_small;          
                 }
-                font_small = new ofTrueTypeFont(); 
+                font_small = new OFX_UI_FONT_RENDERER();
                 font_small->loadFont(fontName,_size,true, true, false, 0.0,_resolution); 				                            
                 break; 
         }
@@ -2461,9 +2465,9 @@ protected:
 		widgets_map[widget->getName()] = widget;
     }
     
-	ofTrueTypeFont *font_large; 	
-	ofTrueTypeFont *font_medium; 		
-	ofTrueTypeFont *font_small;
+	OFX_UI_FONT_RENDERER *font_large; 	
+	OFX_UI_FONT_RENDERER *font_medium; 		
+	OFX_UI_FONT_RENDERER *font_small;
  	
 	ofxUIEventArgs *GUIevent; 
     int state; 
@@ -2499,7 +2503,7 @@ protected:
                 {
                     delete font_large;
                 }
-                font_large = new ofTrueTypeFont();
+                font_large = new OFX_UI_FONT_RENDERER();
                 success = font_large->loadFont(filename,fontsize,_bAntiAliased, _bFullCharacterSet, makeContours, simplifyAmt,dpi);
                 break;
                 
@@ -2508,7 +2512,7 @@ protected:
                 {
                     delete font_medium;
                 }
-                font_medium = new ofTrueTypeFont();
+                font_medium = new OFX_UI_FONT_RENDERER();
                 success = font_medium->loadFont(filename,fontsize,_bAntiAliased, _bFullCharacterSet, makeContours, simplifyAmt,dpi);
                 break;
                 
@@ -2517,7 +2521,7 @@ protected:
                 {
                     delete font_small;
                 }
-                font_small = new ofTrueTypeFont();
+                font_small = new OFX_UI_FONT_RENDERER();
                 success = font_small->loadFont(filename,fontsize,_bAntiAliased, _bFullCharacterSet, makeContours, simplifyAmt,dpi);
                 break;
         }

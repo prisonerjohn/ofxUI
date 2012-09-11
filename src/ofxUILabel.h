@@ -25,6 +25,10 @@
 #ifndef OFXUI_LABEL
 #define OFXUI_LABEL
 
+#ifdef OFX_UI_FONT_INCLUDE
+#include OFX_UI_FONT_INCLUDE
+#endif
+
 #include "ofxUIWidgetWithLabel.h"
 
 class ofxUILabel : public ofxUIWidgetWithLabel
@@ -226,7 +230,7 @@ public:
         return label; 
     }
 	
-	void setFont(ofTrueTypeFont *_font)
+	void setFont(OFX_UI_FONT_RENDERER *_font)
 	{
 		font = _font; 
 		setLabel(label); 

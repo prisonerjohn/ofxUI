@@ -25,6 +25,10 @@
 #ifndef OFXUI_WIDGET
 #define OFXUI_WIDGET
 
+#ifdef OFX_UI_FONT_INCLUDE
+#include OFX_UI_FONT_INCLUDE
+#endif
+
 class ofxUIWidget           
 {
 public:
@@ -363,7 +367,7 @@ public:
 		return kind; 
 	}
     
-	virtual void setFont(ofTrueTypeFont *_font)
+	virtual void setFont(OFX_UI_FONT_RENDERER *_font)
 	{
 		font = _font; 
 	}
@@ -514,7 +518,7 @@ public:
 protected:    
 	ofxUIWidget *parent; 
 	ofxUIRectangle *rect; 	
-	ofTrueTypeFont *font; 	
+	OFX_UI_FONT_RENDERER *font; 	
 	
     string name;            //State Properties
 	int kind; 
