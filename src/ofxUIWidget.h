@@ -514,7 +514,12 @@ public:
     {
         
     }
-    
+
+	virtual bool hasModalWidget()
+    {
+        return false;
+    }
+
     virtual void addEmbeddedWidget(ofxUIWidget *widget)
     {
         widget->setEmbedded(true);

@@ -320,20 +320,28 @@ public:
     {
         if(rect->inside(x, y) && hit)
         {
-            setValue(!(*value));
+
+			setValue(!(*value));
 #ifdef TARGET_OPENGLES
-            state = OFX_UI_STATE_NORMAL;        
+			state = OFX_UI_STATE_NORMAL;
 #else            
-            state = OFX_UI_STATE_OVER; 
-#endif 
-			triggerEvent(this); 
-        }    
+			state = OFX_UI_STATE_OVER;
+#endif
+			triggerEvent(this);
+        }
         else
         {
-            state = OFX_UI_STATE_NORMAL;         
+            state = OFX_UI_STATE_NORMAL;
+			if(autoClose && isOpen())
+			{
+				close();
+				triggerEvent(this);
+			}
         }
-        stateChange();     
-        hit = false; 
+		
+		
+        stateChange();
+        hit = false;
     }
         
     void setAutoClose(bool _autoClose)
@@ -350,7 +358,6 @@ public:
     {
         setValue(false);
     }
-
     
     void setVisible(bool _visible)
     {

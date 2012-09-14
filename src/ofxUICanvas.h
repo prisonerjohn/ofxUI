@@ -1074,7 +1074,7 @@ public:
             }
         }           
 //        addWidget(new ofxUISpacer(xMin+moveDeltaX, yMin+moveDeltaY, w, h));
-    }    
+    }
     
     void centerWidgetsHorizontallyOnCanvas()
     {
@@ -1093,9 +1093,9 @@ public:
 
     virtual void addModalWidget(ofxUIWidget *widget)
     {
-        widgetsAreModal[widget->getName()] = widget;                             
+        widgetsAreModal[widget->getName()] = widget;
     }
-
+	
     virtual void removeModalWidget(ofxUIWidget *widget)
     {
         map<string, ofxUIWidget*>::iterator it;
@@ -1106,6 +1106,11 @@ public:
         }
     }
     
+	virtual bool hasModalWidget()
+	{
+		return widgetsAreModal.size() != 0;
+	}
+	
     void removeWidget(ofxUIWidget *widget)
     {
 //        cout << endl; 

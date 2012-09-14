@@ -178,7 +178,7 @@ public:
                 string::iterator it;
                 it=labelstring.end();
                 it--; 
-                labelstring.erase (it); 
+                labelstring.erase (it);
                 label->setLabel(labelstring);
             }                        
         }
