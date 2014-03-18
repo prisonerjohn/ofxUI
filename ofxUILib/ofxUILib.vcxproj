@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="..\..\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="..\src\ofxUI.h" />
+    <ClInclude Include="..\src\ofxUI2DGraph.h" />
+    <ClInclude Include="..\src\ofxUI2DPad.h" />
+    <ClInclude Include="..\src\ofxUIBaseDraws.h" />
+    <ClInclude Include="..\src\ofxUIBiLabelSlider.h" />
+    <ClInclude Include="..\src\ofxUIButton.h" />
+    <ClInclude Include="..\src\ofxUICanvas.h" />
+    <ClInclude Include="..\src\ofxUICircleSlider.h" />
+    <ClInclude Include="..\src\ofxUIDefines.h" />
+    <ClInclude Include="..\src\ofxUIDragableLabelButton.h" />
+    <ClInclude Include="..\src\ofxUIDropDownList.h" />
+    <ClInclude Include="..\src\ofxUIEventArgs.h" />
+    <ClInclude Include="..\src\ofxUIFPS.h" />
+    <ClInclude Include="..\src\ofxUIFPSSlider.h" />
+    <ClInclude Include="..\src\ofxUIImage.h" />
+    <ClInclude Include="..\src\ofxUIImageButton.h" />
+    <ClInclude Include="..\src\ofxUIImageSampler.h" />
+    <ClInclude Include="..\src\ofxUIImageSlider.h" />
+    <ClInclude Include="..\src\ofxUIImageToggle.h" />
+    <ClInclude Include="..\src\ofxUILabel.h" />
+    <ClInclude Include="..\src\ofxUILabelButton.h" />
+    <ClInclude Include="..\src\ofxUILabelToggle.h" />
+    <ClInclude Include="..\src\ofxUIMinimalSlider.h" />
+    <ClInclude Include="..\src\ofxUIMovingGraph.h" />
+    <ClInclude Include="..\src\ofxUIMultiImageButton.h" />
+    <ClInclude Include="..\src\ofxUIMultiImageToggle.h" />
+    <ClInclude Include="..\src\ofxUINumberDialer.h" />
+    <ClInclude Include="..\src\ofxUIOFWrapper.h" />
+    <ClInclude Include="..\src\ofxUIRadio.h" />
+    <ClInclude Include="..\src\ofxUIRangeSlider.h" />
+    <ClInclude Include="..\src\ofxUIRectangle.h" />
+    <ClInclude Include="..\src\ofxUIRotarySlider.h" />
+    <ClInclude Include="..\src\ofxUIScrollableCanvas.h" />
+    <ClInclude Include="..\src\ofxUISlider.h" />
+    <ClInclude Include="..\src\ofxUISortableList.h" />
+    <ClInclude Include="..\src\ofxUISpacer.h" />
+    <ClInclude Include="..\src\ofxUISpectrum.h" />
+    <ClInclude Include="..\src\ofxUISuperCanvas.h" />
+    <ClInclude Include="..\src\ofxUITabBar.h" />
+    <ClInclude Include="..\src\ofxUITextArea.h" />
+    <ClInclude Include="..\src\ofxUITextInput.h" />
+    <ClInclude Include="..\src\ofxUIToggle.h" />
+    <ClInclude Include="..\src\ofxUIToggleMatrix.h" />
+    <ClInclude Include="..\src\ofxUIUtils.h" />
+    <ClInclude Include="..\src\ofxUIValuePlotter.h" />
+    <ClInclude Include="..\src\ofxUIWaveform.h" />
+    <ClInclude Include="..\src\ofxUIWidget.h" />
+    <ClInclude Include="..\src\ofxUIWidgets.h" />
+    <ClInclude Include="..\src\ofxUIWidgetWithLabel.h" />
+    <ClInclude Include="..\src\ofxUIWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ofxXmlSettings\libs\tinyxml.cpp" />
+    <ClCompile Include="..\..\ofxXmlSettings\libs\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="..\..\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="..\src\ofxUI2DGraph.cpp" />
+    <ClCompile Include="..\src\ofxUI2DPad.cpp" />
+    <ClCompile Include="..\src\ofxUIBaseDraws.cpp" />
+    <ClCompile Include="..\src\ofxUIBiLabelSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIButton.cpp" />
+    <ClCompile Include="..\src\ofxUICanvas.cpp" />
+    <ClCompile Include="..\src\ofxUICircleSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIDragableLabelButton.cpp" />
+    <ClCompile Include="..\src\ofxUIDropDownList.cpp" />
+    <ClCompile Include="..\src\ofxUIEventArgs.cpp" />
+    <ClCompile Include="..\src\ofxUIFPS.cpp" />
+    <ClCompile Include="..\src\ofxUIFPSSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIImage.cpp" />
+    <ClCompile Include="..\src\ofxUIImageButton.cpp" />
+    <ClCompile Include="..\src\ofxUIImageSampler.cpp" />
+    <ClCompile Include="..\src\ofxUIImageSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIImageToggle.cpp" />
+    <ClCompile Include="..\src\ofxUILabel.cpp" />
+    <ClCompile Include="..\src\ofxUILabelButton.cpp" />
+    <ClCompile Include="..\src\ofxUILabelToggle.cpp" />
+    <ClCompile Include="..\src\ofxUIMinimalSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIMovingGraph.cpp" />
+    <ClCompile Include="..\src\ofxUIMultiImageButton.cpp" />
+    <ClCompile Include="..\src\ofxUIMultiImageToggle.cpp" />
+    <ClCompile Include="..\src\ofxUINumberDialer.cpp" />
+    <ClCompile Include="..\src\ofxUIRadio.cpp" />
+    <ClCompile Include="..\src\ofxUIRangeSlider.cpp" />
+    <ClCompile Include="..\src\ofxUIRectangle.cpp" />
+    <ClCompile Include="..\src\ofxUIRotarySlider.cpp" />
+    <ClCompile Include="..\src\ofxUIScrollableCanvas.cpp" />
+    <ClCompile Include="..\src\ofxUISlider.cpp" />
+    <ClCompile Include="..\src\ofxUISortableList.cpp" />
+    <ClCompile Include="..\src\ofxUISpacer.cpp" />
+    <ClCompile Include="..\src\ofxUISpectrum.cpp" />
+    <ClCompile Include="..\src\ofxUISuperCanvas.cpp" />
+    <ClCompile Include="..\src\ofxUITabBar.cpp" />
+    <ClCompile Include="..\src\ofxUITextArea.cpp" />
+    <ClCompile Include="..\src\ofxUITextInput.cpp" />
+    <ClCompile Include="..\src\ofxUIToggle.cpp" />
+    <ClCompile Include="..\src\ofxUIToggleMatrix.cpp" />
+    <ClCompile Include="..\src\ofxUIValuePlotter.cpp" />
+    <ClCompile Include="..\src\ofxUIWaveform.cpp" />
+    <ClCompile Include="..\src\ofxUIWidget.cpp" />
+    <ClCompile Include="..\src\ofxUIWidgetWithLabel.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{641DB976-E775-4D72-86EB-897E2C4A0EEE}</ProjectGuid>
+    <RootNamespace>ofxTimelineLib</RootNamespace>
+    <ProjectName>ofxUILib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="ofxUI.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="ofxUI.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="ofxUI.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="ofxUI.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command />
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
