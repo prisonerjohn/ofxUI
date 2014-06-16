@@ -7,6 +7,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\..\addons\ofxUI\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <PreBuildEvent>
       <Command>
